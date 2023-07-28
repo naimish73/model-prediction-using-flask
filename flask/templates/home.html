@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model data input</title>
+</head>
+    <h1>Model input data:</h1><hr />
+    <form action="{{url_for('predict')}}" method="post">
+        <div>
+            <label for="first">Discharge Time: </label>
+            <input id="first" type="number" name="chargeTime" />
+        </div>
+        <div>
+            <label for="second">Charge Time: &nbsp; &nbsp; </label>
+            <input id="second" type="number" name="dischargeTime" />
+        </div>
+
+        <Button type="submit">Predict</Button>
+
+    </form>
+
+    <h2>
+        The prediction is: {{results}}
+    </h2>
+</body>
+</html>
